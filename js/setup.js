@@ -62,9 +62,11 @@ var setupOpen = document.querySelector('.setup-open');
 var setup = document.querySelector('.setup');
 // еще одна переменная .setup userDialog
 var setupClose = setup.querySelector('.setup-close');
+var ENTER_KEY = 'Enter';
+var ESCAPE_KEY = 'Escape';
 
 var onPopupEscPress = function (evt) {
-  if (evt.key === 'Escape') {
+  if (evt.key === ESCAPE_KEY) {
     evt.preventDefault();
     closePopup();
   }
@@ -87,7 +89,7 @@ setupOpen.addEventListener('click', function () {
 });
 
 setupOpen.addEventListener('keydown', function (evt) {
-  if (evt.key === 'Enter') {
+  if (evt.key === ENTER_KEY) {
     openPopup();
   }
 });
@@ -97,7 +99,7 @@ setupClose.addEventListener('click', function () {
 });
 
 setupClose.addEventListener('keydown', function (evt) {
-  if (evt.key === 'Enter') {
+  if (evt.key === ENTER_KEY) {
     closePopup();
   }
 });
