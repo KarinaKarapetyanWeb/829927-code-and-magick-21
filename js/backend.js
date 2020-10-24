@@ -14,7 +14,8 @@
 
     xhr.addEventListener('load', function () {
       if (xhr.status === StatusCode.OK) {
-        onLoad(xhr.response);
+        window.util.wizards = xhr.response;
+        onLoad(window.util.wizards);
       } else {
         onError('Статус ответа: ' + xhr.status + ' ' + xhr.statusText);
       }
